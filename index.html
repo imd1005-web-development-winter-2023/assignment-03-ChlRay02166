@@ -20,14 +20,15 @@
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
   <body>
+    <header>
+      <h1>Task List</h1>
+       <div class="input_stuff">
+        <input
+        placeholder="Add new Task!"
+        >
+       </div>
+    </header>
     <!--
-
-      ADD YOUR ASSIGNMENT 03 CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-      IMPORTANT CHECKLIST:
-
       - Are users able to create and delete to do list items?
       - Have you set a favicon? (included - but it's a rocket)
       - Do you have a css reset file? (included)
@@ -36,7 +37,26 @@
 
     -->
     <main>
-      <div id="app"></div>
+
+      <div id="Tasks_Bar">
+        <div class="Task_Content">
+          <input 
+          type="text"
+          class="text"
+          value="soup"
+          readonly
+          >
+
+          <div class="Button">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
