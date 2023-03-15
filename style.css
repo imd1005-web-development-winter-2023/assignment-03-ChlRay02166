@@ -9,7 +9,7 @@
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
   --colour-amaranth: #e63946;
-  --colour-peppermint: #aaa5cc;
+  --colour-peppermint: #342E5B;
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
@@ -31,7 +31,7 @@
 
 .title{
 font-size: 24px;
-
+color: aliceblue;
 }
 
 .input_stuff{
