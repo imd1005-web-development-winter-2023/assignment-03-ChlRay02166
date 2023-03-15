@@ -21,36 +21,44 @@
   </head>
   <body>
     <header>
-      <h1>Task List</h1>
-       <div class="input_stuff">
-        <input
-        placeholder="Add new Task!"
-        >
-       </div>
+      <div class="title">
+        <h1>Task List</h1>
+      </div>
+           <div class="input_stuff">
+             <input placeholder="Add new Task!">
+           </div>
     </header>
-    <!--
-      - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
-      - Do you have a css reset file? (included)
-      - Has a team member conducted a code review and left a GitHub Issue in your repo?
-      - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-    -->
+   
     <main>
 
       <div id="Tasks_Bar">
         <div class="Task_Content">
-          <input 
-          type="text"
-          class="text"
-          value="soup"
-          readonly
-          >
+           <li class="Task">
 
-          <div class="Button">
-            <button class="edit">Edit</button>
-            <button class="delete">Delete</button>
+             <label for="1">
+               <input type="checkbox" id="1">
+               <p>eggs</p>
+             </label>
 
+             <div class="Button">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+
+           </li>
+           <li class="Task">
+            
+            <label for="2">
+              <input type="checkbox" id="2">
+              <p>soup</p>
+            </label>
+
+            <div class="Button">
+             <button class="edit">Edit</button>
+             <button class="delete">Delete</button>
+            </div>
+
+          </li>
+          
           </div>
 
         </div>

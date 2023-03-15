@@ -9,7 +9,7 @@
   /* Core colours */
   /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
   --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
+  --colour-peppermint: #aaa5cc;
   --colour-aquaisland: #a8dadc;
   --colour-wedgewood: #457b9d;
   --colour-cello: #1d3557;
@@ -25,20 +25,51 @@
 /*
   PAGE / BODY
 */
+.header{
+  color: #a8dadc;
+}
+
+.title{
+font-size: 24px;
+
+}
+
+.input_stuff{
+  background-color: aliceblue;
+  padding: 20px;
+  border-radius: 12px;
+}
+
 body {
+  display:flex;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
   background-color: var(--body-background-colour);
-  display:flex;
-  flex-direction: 100vh;
+  flex-direction: column;
+  padding: 40px 40px;
+}
+
+.Task_Content{
+  max-width: 680;
+  margin-top: 55px ;
+  background-color: aliceblue;
+  border-radius: 12px;
+  min-width: 600px ;
+  padding: 20px;
+}
+
+.Task{
+display: flex;
+border-bottom: 3px solid #D3D8E1;
+height: 85px;
+justify-content: space-between;
 }
 
 main {
   min-height: 100vh;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
+ 
 }
 
 /*
@@ -54,4 +85,17 @@ main {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.button {
+appearance: none;
+border: none;
+background: none;
+outline: none;
+}
+.edit{
+  cursor: pointer;
+}
+.delete{
+  cursor: pointer;
 }
