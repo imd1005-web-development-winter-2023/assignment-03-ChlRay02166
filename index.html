@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Set the charset we're using to UTF-8 -->
 	<meta charset="utf-8">
+
+	 <!-- Set the screens default zoom / scale to 1 -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>To-Do App</title>
+	
+	<!-- Set the page title -->
+	<title>To-Do List</title>
+
+	<!-- This is where all of our awesome CSS code goes -->
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+	<img src="/images/favicon/Checkmark_logo.png" alt="Logo" width=50 height="50">
+	<!--This is where i inserted date code-->
     <div id="date"><script>
       date = new Date();
       year = date.getFullYear();
@@ -15,6 +24,7 @@
       day = date.getDate();
       document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
       </script>
+	</div>
   </header>
 	<div class="container">
 		<h1>To-Do List</h1>
@@ -22,6 +32,8 @@
 			<input type="text" id="new-item" placeholder="Add a new to-do :D">
 			<button type="submit" id="add-btn">Add</button>
 		</form>
+
+		<!--bullet point, no order-->
 		<ul id="to-do-list"></ul>
 	</div>
 	<script src="main.js"></script>

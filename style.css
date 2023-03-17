@@ -13,16 +13,25 @@ body {
 	max-width: 600px;
 }
 
-header{
-	text-align: left;
-  margin-left: 38px;
-  color: #fff;
+#date{
+	margin-top: 6px;
+}
+
+header {
+	display: inline-flex;
+	padding-block: 10px;
+	margin: 20px;
+    margin-left: 38px;
+    color: #fff;
+    font:bold 24px'Segoe UI';
+
 }
 
 h1{
   text-align: left;
-  margin-left: 38px;
+  margin-left: 30px;
 }
+
 
 #to-do-form input[type="text"] {
 	width: 70%;
@@ -31,6 +40,7 @@ h1{
 	border-radius: 5px;
 	font-size: 16px;
 	margin-right: 10px;
+	margin-left: 30px;
 }
 
 #to-do-form button {
@@ -53,7 +63,7 @@ ul {
 }
 
 
-li {
+todo{
   display: flex;
 	padding: 10px;
 	background-color: #fff;
@@ -63,10 +73,10 @@ li {
 }
 
 
-li:last-child {
+todo:last-child {
 	border-bottom: none;
 }
 
-li:hover {
+todo:hover {
 	background-color: #e6e6e6;
 }
