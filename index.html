@@ -1,73 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Set the page title -->
-    <title>Assignment 03</title>
-
-    <!-- Set the charset we're using to UTF-8 -->
-    <meta charset="UTF-8" />
-
-    <!-- Set the screens default zoom / scale to 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- We are using a CSS Reset file to standardize browser default css -->
-    <link rel="stylesheet" href="reset.css" />
-
-    <!-- This is where all of our awesome CSS code goes -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
-  </head>
-  <body>
-    <header>
-      <div class="title">
-        <h1>Task List</h1>
-      </div>
-           <div class="input_stuff">
-             <input placeholder="Add new Task!">
-           </div>
-    </header>
-   
-    <main>
-
-      <div id="Tasks_Bar">
-        <div class="Task_Content">
-           <li class="Task">
-
-             <label for="1">
-               <input type="checkbox" id="1">
-               <p>eggs</p>
-             </label>
-
-             <div class="Button">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-
-           </li>
-           <li class="Task">
-            
-            <label for="2">
-              <input type="checkbox" id="2">
-              <p>soup</p>
-            </label>
-
-            <div class="Button">
-             <button class="edit">Edit</button>
-             <button class="delete">Delete</button>
-            </div>
-
-          </li>
-          
-          </div>
-
-        </div>
-
-      </div>
-
-    </main>
-
-    <!-- This is where we add our awesome JavaScript code -->
-    <script src="./main.js"></script>
-  </body>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To-Do App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="date"><script>
+      date = new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
+      </script>
+  </header>
+	<div class="container">
+		<h1>To-Do List</h1>
+		<form id="to-do-form">
+			<input type="text" id="new-item" placeholder="Add a new to-do :D">
+			<button type="submit" id="add-btn">Add</button>
+		</form>
+		<ul id="to-do-list"></ul>
+	</div>
+	<script src="main.js"></script>
+</body>
 </html>
+

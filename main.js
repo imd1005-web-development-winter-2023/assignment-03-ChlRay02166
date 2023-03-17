@@ -1,45 +1,40 @@
-//
-//  JS File
-//  You may remove the code below - it's just boilerplate
-//
+const form = document.querySelector('#to-do-form');
+const input = document.querySelector('#new-item');
+const ul = document.querySelector('#to-do-list');
 
-//
-// Variables
-//
+form.addEventListener('submit', function(event) {
+	event.preventDefault();
+	if (input.value === '') {
+		alert('Please enter a task.');
+	} else {
+		const li = document.createElement('li');
+		const checkbox = document.createElement('input');
+		const span = document.createElement('span');
+		const button = document.createElement('button');
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
+		checkbox.type = 'checkbox';
+		span.textContent = input.value;
+		button.textContent = 'Delete';
 
-// Variables
+		li.appendChild(checkbox);
+		li.appendChild(span);
+		li.appendChild(button);
+		ul.appendChild(li);
 
-// DOM Elements
-let appContainer = document.getElementById(appID);
+		input.value = '';
 
-//
-// Functions
-//
+		button.addEventListener('click', function() {
+			ul.removeChild(li);
+		});
 
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
-  }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
-
-
-//
-// Inits & Event Listeners
-//
-
-inititialise();
+		checkbox.addEventListener('change', function() {
+			if (this.checked) {
+				span.style.textDecoration = 'line-through';
+				span.style.color = '#C0C8D6';
+			} else {
+				span.style.textDecoration = 'none';
+				span.style.color = '#000';
+			}
+		});
+	}
+});
